@@ -8,3 +8,6 @@
 - [处理Uncaught ReferenceError: Cannot read property 'xxx' of undefined](https://github.com/heyach/blog/issues/5)
 - [用node+express+mysql搭建一个后端环境](https://github.com/heyach/blog/issues/6)
 - [使用multer处理文件上传](https://github.com/heyach/blog/issues/7)
+- [块级格式化上下文BFC的理解和应用](https://github.com/heyach/blog/issues/8)
+- [用react的class方式实现一个通用数字组件NumberBox](https://github.com/heyach/blog/issues/9)
+- [用react的functional方式实现一个通用数字组件NumberBox](https://github.com/heyach/blog/issues/10)
