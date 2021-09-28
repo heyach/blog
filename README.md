@@ -6,6 +6,7 @@
 - [requestAnimationFrame定时动画](https://github.com/heyach/blog/issues/16)
 - [处理Uncaught ReferenceError: Cannot read property 'xxx' of undefined](https://github.com/heyach/blog/issues/5)
 - [详细解读事件循环Event Loop](https://github.com/heyach/blog/issues/12)
+- [函数调用形参传递引用类型（对象）的坑](https://github.com/heyach/blog/issues/15)
 
 ### css
 - [块级格式化上下文BFC的理解和应用](https://github.com/heyach/blog/issues/8)
@@ -15,6 +16,8 @@
 - [从零开始搭建一个vue开发环境](https://github.com/heyach/blog/issues/2)
 - [用vue实现一个通用数字组件NumberBox](https://github.com/heyach/blog/issues/3)
 - [用vue实现一个上传图片组件Uploader](https://github.com/heyach/blog/issues/4)
+- [Vue富文本编辑器vue-trix和wangEditor爬坑指南](https://github.com/heyach/blog/issues/13)
+- [富文本编辑器Trix爬坑](https://github.com/heyach/blog/issues/14)
 
 ### react
 - [用react的class方式实现一个通用数字组件NumberBox](https://github.com/heyach/blog/issues/9)
