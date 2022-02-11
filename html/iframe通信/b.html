@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    这里是子页面的内容
+    <div id="bbb">往父页面发数据</div>
+    <div id="receive"></div>
+    <script>
+        window.addEventListener("message", function(e) {
+            document.getElementById("receive").innerHTML = "接收到父页面发送的消息->" + e.data
+        })
+        document.getElementById("bbb").onclick = function() {
+            window.parent.postMessage("xxxx", "*")
+        }
+    </script>
+</body>
+</html>
