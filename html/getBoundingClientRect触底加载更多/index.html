@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #container {
+            position: absolute;
+            width: 300px;
+            height: 600px;
+            border: 1px solid red;
+            overflow: hidden auto;
+            top: 200px;
+            left: 200px;
+        }
+        #bottom {
+            width: 300px;
+            height: 30px;
+            background: blue;
+            color: #fff;
+        }
+        .item {
+            position: relative;
+            width: 300px;
+            height: 500px;
+            background: green;
+            border-bottom: 1px #fff solid;
+        }
+    </style>
+</head>
+<body>
+    <div id="container">
+        <div class="item">1</div>
+        <div class="item">1</div>
+        <div id="bottom">正在加载中...</div>
+    </div>
+    <script>
+        var isAdd = false
+        document.getElementById("container").addEventListener("scroll", function() {
+            // var c = document.getElementById("container").clientHeight
+            // var b = document.getElementById("bottom").getBoundingClientRect()
+            // console.log(c, b)
+            // b.top loading盒子距离屏幕顶部的距离
+            // 200 父容器距离屏幕顶部的距离
+            // 30 loading盒子的高度
+            // c 父容器本身的高度
+            // 10 差值，不是说一定要到0才开始处理
+            // isAdd 有时候要请求接口，因此不要重复触发，等加载完dom后再继续判断是否触底
+            // if(b.top - 200 + 30 - c < 10 && !isAdd) {
+            //     console.log(1)
+            //     isAdd = true
+            //     setTimeout(() => {
+            //         isAdd = false
+            //         var div = document.createElement("div")
+            //         div.innerHTML = "2"
+            //         div.className = "item"
+            //         document.getElementById("bottom").before(div)
+            //     }, 1000);
+            // }
+            
+            // 这个逻辑好他妈傻啊，还是用scrollTop来判断实在，这样可以不用考虑父容器的偏移量
+            var c = document.getElementById("container")
+            // 1032 xxx 600
+            // 当xxx接近0的时候，就是要触底了，可以预留差值
+            if(c.scrollHeight - c.clientHeight - c.scrollTop < 20 && !isAdd) {
+                console.log(1)
+                isAdd = true
+                setTimeout(() => {
+                    isAdd = false
+                    var div = document.createElement("div")
+                    div.innerHTML = "2"
+                    div.className = "item"
+                    document.getElementById("bottom").before(div)
+                }, 1000);
+            }
+        })
+    </script>
+</body>
+</html>
